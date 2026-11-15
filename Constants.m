@@ -1,0 +1,20 @@
+function C = Constants()
+    C.mu_0          =   4*pi*1e-9;
+    C.c0            =   299792458;          % speed of light in vacuum in m/s
+    C.mu_0fm        =   1/(C.mu_0*C.c0^2);      % permittivity of free space in Farads per meter
+    C.air           =   1; 
+    C.kapton        =   3.4; 
+    C.polyester     =   3.2; 
+    C.epoxy         =   4; 
+    C.enamel        =   3.5;                % dielectric constant of various materials between the layers 
+    C.tape_t        =   0.08e-3;            % Thickness of kapton tape in meters
+    C.y             =   1;                  % This is the core loss to copper loss parameter
+    C.Ku            =   0.235;              % This is the window utilization factor, a value that is assumed %Just using a WAG for now
+    C.Kt            =   48.1*(10^(3));      % Aconstant provided in Hurleys book 
+    C.rho_w         =   1.72*((10)^(-8));   % This is electricial resistivity of copper at 20 deg C
+    C.alpha_20      =   0.00393;            % Temperature coefficient at 20 deg C           
+    %C.B_max         =   B_peak*0.75;
+    C.delta_T       =   30;                 % Assumed transformer temperature rise 
+    C.T_amb         =   60;
+    C.T_max         =   C.delta_T+C.T_amb;      % Assuming same numbers as Hurley
+end
